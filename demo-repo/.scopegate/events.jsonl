@@ -1,0 +1,14 @@
+{"ts":"2026-10-25T12:55:24.832Z","tool":"scopegate","summary":"ScopeGate initialized for task: \"Fix login redirect bug\"","decision":"allow","rule":"contract.start"}
+{"ts":"2026-10-25T12:56:17.999Z","tool":"Edit","summary":"write allowed: src/auth/login.js","decision":"allow","rule":"write.in-scope"}
+{"ts":"2026-10-25T12:56:18.003Z","tool":"Bash","summary":"shell [npm test]","decision":"allow","rule":"shell.allowed"}
+{"ts":"2026-10-25T12:56:18.006Z","tool":"Edit","summary":"write out-of-scope: billing/invoice.js","decision":"deny","rule":"write.out-of-scope"}
+{"ts":"2026-10-25T12:56:18.008Z","tool":"Write","summary":"write protected: .scopegate/contract.json","decision":"deny","rule":"write.protected"}
+{"ts":"2026-10-25T12:56:18.012Z","tool":"View","summary":"read secret denied: .env","decision":"deny","rule":"read.denied"}
+{"ts":"2026-10-25T12:56:18.014Z","tool":"Bash","summary":"shell [scopegate widen --write 'billing/**']","decision":"deny","rule":"shell.scopegate-tamper"}
+{"ts":"2026-10-25T12:59:22.769Z","tool":"human.widen","summary":"Human widened scope: write=[billing/**], allowCmd=[]","decision":"allow","rule":"human.widen"}
+{"ts":"2026-10-25T13:02:44.717Z","tool":"Edit","summary":"write allowed: src/auth/login.js","decision":"allow","rule":"write.in-scope"}
+{"ts":"2026-10-25T13:02:44.720Z","tool":"Bash","summary":"shell [npm test]","decision":"allow","rule":"shell.allowed"}
+{"ts":"2026-10-25T13:02:44.723Z","tool":"Edit","summary":"write allowed: billing/invoice.js","decision":"allow","rule":"write.in-scope"}
+{"ts":"2026-10-25T13:02:44.724Z","tool":"Write","summary":"write protected: .scopegate/contract.json","decision":"deny","rule":"write.protected"}
+{"ts":"2026-10-25T13:02:44.726Z","tool":"View","summary":"read secret denied: .env","decision":"deny","rule":"read.denied"}
+{"ts":"2026-10-25T13:02:44.728Z","tool":"Bash","summary":"shell [scopegate widen --write 'billing/**']","decision":"deny","rule":"shell.scopegate-tamper"}

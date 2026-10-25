@@ -1,0 +1,36 @@
+{
+  "task": "Fix login redirect bug",
+  "repoRoot": "C:\\Users\\adity\\failproof\\demo-repo",
+  "base": "9d753dccfbc8b51db0bf951bdd4d3c58ad27ff7d",
+  "write": [
+    "src/auth/**",
+    "test/auth/**",
+    "billing/**"
+  ],
+  "readDeny": [
+    ".env*",
+    "**/.env*",
+    "**/*.pem",
+    "**/id_rsa*",
+    "**/.ssh/**",
+    "**/.aws/**"
+  ],
+  "commands": {
+    "allow": [
+      "npm test",
+      "git status",
+      "git diff"
+    ],
+    "deny": [
+      "git push",
+      "npm publish",
+      "curl",
+      "wget",
+      "ssh",
+      "sudo",
+      "rm -rf",
+      "scopegate"
+    ]
+  },
+  "mode": "enforce"
+}

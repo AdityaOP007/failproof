@@ -1,0 +1,27 @@
+{
+  "name": "scopegate",
+  "version": "1.0.0",
+  "description": "Task-Scoped Guardrails for AI Coding Agents",
+  "type": "module",
+  "main": "src/evaluate.js",
+  "bin": {
+    "scopegate": "./bin/scopegate.js"
+  },
+  "scripts": {
+    "test": "node --test test/evaluate.test.js",
+    "scopegate:test": "node src/cli.js test"
+  },
+  "keywords": [
+    "guardrails",
+    "failproofai",
+    "ai-agent",
+    "security",
+    "least-privilege",
+    "policy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "picomatch": "^4.0.7"
+  }
+}
